@@ -12,7 +12,6 @@
       text-align: center;
     }
 
-    /* Top navigation */
     .top-nav {
       display: flex;
       justify-content: flex-end;
@@ -28,27 +27,37 @@
       text-decoration: underline;
     }
 
-    /* Google logo */
     .logo {
       font-size: 80px;
       font-weight: bold;
       margin-top: 120px;
     }
-
-    /* Search box */
     .search-box {
       margin-top: 20px;
+      position: relative;
+      display: inline-block;
     }
     .search-input {
       width: 500px;
-      padding: 12px 20px;
+      padding: 12px 20px 12px 20px;
       border-radius: 25px;
       border: none;
       outline: none;
       font-size: 16px;
     }
-
-    /* Buttons */
+    .icons {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      gap: 10px;
+    }
+    .icons img {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
     .buttons {
       margin-top: 20px;
     }
@@ -65,8 +74,6 @@
     .btn:hover {
       border: 1px solid #5f6368;
     }
-
-    /* Footer */
     .footer {
       position: fixed;
       bottom: 0;
@@ -95,27 +102,25 @@
   </style>
 </head>
 <body>
-  <!-- Top navigation -->
   <div class="top-nav">
     <a href="#">Gmail</a>
     <a href="#">Images</a>
   </div>
-
-  <!-- Google Logo -->
+  
   <div class="logo">Google</div>
 
-  <!-- Search Box -->
   <div class="search-box">
     <input type="text" class="search-input" placeholder="Search Google or type a URL">
+    <div class="icons">
+      <img src="https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png" alt="Mic">
+      <img src="https://www.gstatic.com/images/icons/material/system/1x/photo_camera_gm_grey_24dp.png" alt="Camera">
   </div>
-
-  <!-- Buttons -->
+  </div>
   <div class="buttons">
     <button class="btn">Google Search</button>
     <button class="btn">I'm Feeling Lucky</button>
   </div>
 
-  <!-- Footer -->
   <div class="footer">
     <div>
       <a href="#">Advertising</a>
