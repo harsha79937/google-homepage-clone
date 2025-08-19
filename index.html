@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #202124;
+      color: white;
+      text-align: center;
+    }
+
+    /* Top navigation */
+    .top-nav {
+      display: flex;
+      justify-content: flex-end;
+      padding: 15px 20px;
+      font-size: 14px;
+    }
+    .top-nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+    }
+    .top-nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Google logo */
+    .logo {
+      font-size: 80px;
+      font-weight: bold;
+      margin-top: 120px;
+    }
+
+    /* Search box */
+    .search-box {
+      margin-top: 20px;
+    }
+    .search-input {
+      width: 500px;
+      padding: 12px 20px;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+
+    /* Buttons */
+    .buttons {
+      margin-top: 20px;
+    }
+    .btn {
+      background-color: #303134;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .btn:hover {
+      border: 1px solid #5f6368;
+    }
+
+    /* Footer */
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #171717;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 50px;
+      font-size: 14px;
+    }
+    .footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #9aa0a6;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top navigation -->
+  <div class="top-nav">
+    <a href="#">Gmail</a>
+    <a href="#">Images</a>
+  </div>
+
+  <!-- Google Logo -->
+  <div class="logo">Google</div>
+
+  <!-- Search Box -->
+  <div class="search-box">
+    <input type="text" class="search-input" placeholder="Search Google or type a URL">
+  </div>
+
+  <!-- Buttons -->
+  <div class="buttons">
+    <button class="btn">Google Search</button>
+    <button class="btn">I'm Feeling Lucky</button>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div>
+      <a href="#">Advertising</a>
+      <a href="#">Business</a>
+      <a href="#">How Search works</a>
+    </div>
+    <div>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Settings</a>
+    </div>
+  </div>
+</body>
+</html>
