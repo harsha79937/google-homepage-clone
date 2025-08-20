@@ -33,6 +33,7 @@
       gap: 15px;
       position: relative;
     }
+     
     .search-container {
       margin-top: 80px;
     }
@@ -89,6 +90,50 @@
     .buttons input:hover{
       background:#3c4043;
       border: 1px solid #5f6368;
+    }
+    .shortcuts{
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .shortcut {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-size: 13px;
+      color: white;
+      transition: background 0.2s ease;
+    }
+    .shortcut:hover {
+      background: #3c4043;
+    }
+
+    .shortcut .icon{
+      width: 40px;
+      height: 40px;
+      margin-bottom: 8px;
+    }
+    .shortcut .dots{
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 16px;
+      height: 16px;
+      opacity: 0.7;
+      cursor: pointer;
+      display: none;
+    }
+    .shortcut:hover .dots{
+      display: block;
     }
     footer {
       position: fixed;
@@ -204,12 +249,38 @@
       <img src="https://img.icons8.com/ios-filled/24/000000/camera.png" alt="Camera">
       <div class="ai-mode">AI Mode</div>
     </div>
-    <div class="buttons">
+   <!-- <div class="buttons">
       <input type="button" value="Google Search">
       <input type="button" value="I'm Feeling Lucky">
-    </div>
+   </div>-->
   </div>
-
+   <div class="shortcuts">
+    <div class="shortcut">
+      <img class="icon" src="https://img.icons8.com/color/48/000000/gmail.png" alt="Gmail">
+      <span>Gmail</span>
+      <div class="dots">⋮</div>
+    </div>
+    <div class="shortcut">
+      <img class="icon" src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube">
+      <span>YouTube</span>
+     <div class="dots">⋮</div>
+    </div>
+   <div class="shortcut">
+      <img class="icon" src="https://img.icons8.com/color/48/000000/google-maps-new.png" alt="Maps">
+      <span>Maps</span>
+      <div class="dots">⋮</div>
+    </div>
+    <div class="shortcut">
+      <img class="icon" src="https://img.icons8.com/color/48/000000/google-drive--v2.png" alt="Drive">
+      <span>Drive</span>
+      <div class="dots">⋮</div>
+    </div>
+   <div class="shortcut">
+      <img class="icon" src="https://img.icons8.com/color/48/000000/google-photos.png" alt="Photos">
+      <span>Photos</span>
+      <div class="dots">⋮</div>
+    </div>
+   </div>
   <footer>
     <div>
       <a href="#">Advertising</a>
