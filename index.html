@@ -9,7 +9,7 @@
     body {
       background-color: #202124;
       color: white;
-      font-family: Arial, sans-serif;s
+      font-family: Arial, sans-serif;
       text-align: center;
       margin: 0;
     }
@@ -23,6 +23,9 @@
       color: white;
       margin: 0 8px;
       text-decoration: none;
+    }
+    header a:hover{
+      text-decoration: underline;
     }
     .right-icons {
       display: flex;
@@ -81,6 +84,11 @@
       margin: 5px;
       border-radius: 5px;
       cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .buttons input:hover{
+      background:#3c4043;
+      border: 1px solid #5f6368;
     }
     footer {
       position: fixed;
@@ -98,7 +106,9 @@
       margin: 0 10px;
       text-decoration: none;
     }
-    /* Apps menu */
+    footer a:hover{
+      text-decoration: underline;
+    }
     .apps-menu {
       display: none;
       position: absolute;
@@ -135,7 +145,6 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div>
       <a href="#">About</a>
@@ -146,8 +155,6 @@
       <a href="#">Images</a>
       <img id="apps-btn" src="https://img.icons8.com/ios-filled/24/ffffff/circled-menu.png" alt="Apps">
       <img src="https://img.icons8.com/ios-filled/30/ffffff/user-male-circle.png" alt="Profile">
-
-      <!-- Apps Dropdown -->
       <div class="apps-menu" id="apps-menu">
         <div class="app">
           <img src="https://img.icons8.com/color/48/000000/google-drive--v2.png"/>
@@ -188,8 +195,6 @@
       </div>
     </div>
   </header>
-
-  <!-- Search Area -->
   <div class="search-container">
     <div class="logo">Google</div>
     <div class="search-box">
@@ -205,7 +210,6 @@
     </div>
   </div>
 
-  <!-- Footer -->
   <footer>
     <div>
       <a href="#">Advertising</a>
