@@ -3,125 +3,210 @@
 <head>
   <meta charset="UTF-8">
   <title>Google</title>
+  <link rel="icon"
+  href="https://toppng.com/uploads/preview/google-favicon-vector-11573977012mieoxurfqx.png" type="image/x-icon">
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
       background-color: #202124;
       color: white;
+      font-family: Arial, sans-serif;s
       text-align: center;
+      margin: 0;
     }
-
-    .top-nav {
+    header {
       display: flex;
-      justify-content: flex-end;
-      padding: 15px 20px;
+      justify-content: space-between;
+      padding: 10px 20px;
       font-size: 14px;
     }
-    .top-nav a {
-      margin-left: 20px;
-      text-decoration: none;
+    header a {
       color: white;
+      margin: 0 8px;
+      text-decoration: none;
     }
-    .top-nav a:hover {
-      text-decoration: underline;
+    .right-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      position: relative;
     }
-
+    .search-container {
+      margin-top: 80px;
+    }
     .logo {
-      font-size: 80px;
+      font-size: 70px;
       font-weight: bold;
-      margin-top: 120px;
+      margin-bottom: 20px;
     }
     .search-box {
-      margin-top: 20px;
-      position: relative;
-      display: inline-block;
-    }
-    .search-input {
+      background-color: white;
+      color: black;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      padding: 8px 15px;
       width: 500px;
-      padding: 12px 20px 12px 20px;
-      border-radius: 25px;
+      margin: auto;
+    }
+    .search-box input {
       border: none;
       outline: none;
+      flex: 1;
       font-size: 16px;
+      margin-left: 10px;
     }
-    .icons {
-      position: absolute;
-      right: 15px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      gap: 10px;
-    }
-    .icons img {
+    .search-box img {
       width: 20px;
       height: 20px;
+      margin: 0 8px;
+      cursor: pointer;
+    }
+    .ai-mode {
+      background: #3c4043;
+      border-radius: 20px;
+      padding: 4px 10px;
+      margin-left: 10px;
+      color: white;
+      font-size: 13px;
       cursor: pointer;
     }
     .buttons {
       margin-top: 20px;
     }
-    .btn {
-      background-color: #303134;
-      border: none;
+    .buttons input {
+      background: #303134;
       color: white;
+      border: none;
       padding: 10px 20px;
       margin: 5px;
       border-radius: 5px;
       cursor: pointer;
-      font-size: 14px;
     }
-    .btn:hover {
-      border: 1px solid #5f6368;
-    }
-    .footer {
+    footer {
       position: fixed;
       bottom: 0;
-      left: 0;
       width: 100%;
-      background-color: #171717;
-      color: white;
+      background: #171717;
+      color: #999da2;
+      font-size: 14px;
       display: flex;
       justify-content: space-between;
-      padding: 10px 40px;
-      font-size: 14px;
+      padding: 12px 30px;
     }
-    .footer a {
+    footer a {
+      color: #999da2;
       margin: 0 10px;
       text-decoration: none;
-      color: #9aa0a6;
     }
-    .footer a:hover {
-      text-decoration: underline;
+    /* Apps menu */
+    .apps-menu {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      background: #202124;
+      border: 1px solid #3c4043;
+      border-radius: 10px;
+      padding: 15px;
+      width: 250px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      text-align: center;
+      z-index: 1000;
     }
-    .footer-left,
-    .footer-right{
-        display: flex;
-        gap: 15px;
+    .apps-menu.active {
+      display: grid;
+    }
+    .app {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+    .app img {
+      width: 35px;
+      height: 35px;
+      margin-bottom: 5px;
+    }
+    .app span {
+      font-size: 12px;
+      color: white;
     }
   </style>
 </head>
 <body>
-  <div class="top-nav">
-    <a href="#">Gmail</a>
-    <a href="#">Images</a>
-  </div>
-  
-  <div class="logo">Google</div>
+  <!-- Header -->
+  <header>
+    <div>
+      <a href="#">About</a>
+      <a href="#">Store</a>
+    </div>
+    <div class="right-icons">
+      <a href="#">Gmail</a>
+      <a href="#">Images</a>
+      <img id="apps-btn" src="https://img.icons8.com/ios-filled/24/ffffff/circled-menu.png" alt="Apps">
+      <img src="https://img.icons8.com/ios-filled/30/ffffff/user-male-circle.png" alt="Profile">
 
-  <div class="search-box">
-    <input type="text" class="search-input" placeholder="Search Google or type a URL">
-    <div class="icons">
-      <img src="https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png" alt="Mic">
-      <img src="https://www.gstatic.com/images/icons/material/system/1x/photo_camera_gm_grey_24dp.png" alt="Camera">
-  </div>
-  </div>
-  <div class="buttons">
-    <button class="btn">Google Search</button>
-    <button class="btn">I'm Feeling Lucky</button>
+      <!-- Apps Dropdown -->
+      <div class="apps-menu" id="apps-menu">
+        <div class="app">
+          <img src="https://img.icons8.com/color/48/000000/google-drive--v2.png"/>
+          <span>Drive</span>
+        </div>
+        <div class="app">
+          <img src="https://img.icons8.com/color/48/000000/gmail.png"/>
+          <span>Gmail</span>
+        </div>
+        <div class="app">
+          <img src="https://img.icons8.com/color/48/000000/youtube-play.png"/>
+          <span>YouTube</span>
+        </div>
+        <div class="app">
+          <img src="https://img.icons8.com/color/48/000000/google-maps-new.png"/>
+          <span>Maps</span>
+        </div>
+        <div class="app">
+          <img src="https://img.icons8.com/color/48/000000/google-photos.png"/>
+          <span>Photos</span>
+        </div>
+        <div class="app">
+          <img src="https://img.icons8.com/color/48/000000/google-translate.png"/>
+          <span>Translate</span>
+        </div>
+        <div class="app">
+          <img src="https://img.icons8.com/color/48/000000/google-calendar.png"/>
+          <span>Calendar</span>
+        </div>
+        <div class="app">
+          <img src="https://img.icons8.com/color/48/000000/google-logo.png"/>
+          <span>Search</span>
+        </div>
+        <div class="app">
+          <img src="https://img.icons8.com/color/48/000000/google-meet.png"/>
+          <span>Meet</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Search Area -->
+  <div class="search-container">
+    <div class="logo">Google</div>
+    <div class="search-box">
+      <img src="https://img.icons8.com/ios-glyphs/24/000000/search.png" alt="Search">
+      <input type="text" placeholder="Search Google or type a URL">
+      <img src="https://img.icons8.com/ios-glyphs/24/000000/microphone.png" alt="Mic">
+      <img src="https://img.icons8.com/ios-filled/24/000000/camera.png" alt="Camera">
+      <div class="ai-mode">AI Mode</div>
+    </div>
+    <div class="buttons">
+      <input type="button" value="Google Search">
+      <input type="button" value="I'm Feeling Lucky">
+    </div>
   </div>
 
-  <div class="footer">
+  <!-- Footer -->
+  <footer>
     <div>
       <a href="#">Advertising</a>
       <a href="#">Business</a>
@@ -131,8 +216,17 @@
       <a href="#">Privacy</a>
       <a href="#">Terms</a>
       <a href="#">Settings</a>
-      <a href="#">Help       </a>
+      <a href="#">          </a>
     </div>
-  </div>
+  </footer>
+
+  <script>
+    const appsBtn = document.getElementById("apps-btn");
+    const appsMenu = document.getElementById("apps-menu");
+
+    appsBtn.addEventListener("click", () => {
+      appsMenu.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
